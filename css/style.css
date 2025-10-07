@@ -1,0 +1,849 @@
+
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #697ac0e0, #6ee7f0, #8368fa);
+    background-attachment: fixed;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme {
+    background: linear-gradient(135deg, #0f0636, #1f565e, #190f3d);
+    color: #f0f0f0;
+}
+
+/* Навигация */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: #aad1ff ;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #aad1ff;
+    color: #000;
+}
+
+.theme-toggle button {
+    background: #aad1ff;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    background: #aad1ff ;
+    transform: scale(1.05);
+}
+
+/* Основной контент */
+main {
+    margin-top: 80px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Герой секция */
+.hero {
+    background: url('../img/skyrim-bg.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.cta-button {
+    background: #aad1ff;
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #aad1ff ;
+    transform: scale(1.05);
+}
+
+/* Сетка особенностей (Flexbox) */
+.features {
+    margin-bottom: 3rem;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #aad1ff ;
+    font-size: 2.5rem;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 250px;
+    max-width: 250px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.329);
+}
+
+.feature-card h3 {
+    color: #153861;
+    margin-bottom: 1rem;
+}
+
+/* Фракции */
+.factions {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.factions h2 {
+    color: #1d5492;
+    margin-bottom: 1rem;
+}
+
+.factions-list ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.factions-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.factions-list li:hover {
+    color: #aad1ff ;
+    padding-left: 1rem;
+}
+
+.toggle-btn {
+    background: #435066;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: #2d3748;
+}
+
+/* Галерея */
+.gallery {
+    margin-bottom: 3rem;
+}
+
+.gallery h2 {
+    color: #245792;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    padding: 1rem;
+    text-align: center;
+    color: #062f5e;
+}
+
+.fade-btn {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.fade-btn:hover {
+    background: #c53030;
+}
+
+/* Форма подписки */
+.newsletter {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: #1e508a;
+    margin-bottom: 1rem;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.newsletter input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    min-width: 250px;
+}
+
+.newsletter button {
+    background: #38a169;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter button:hover {
+    background: #aad1ff ;
+}
+
+#formMessage {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* О странице */
+.about-hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.about-hero h1 {
+    color: #234d7e;
+    font-size: 2.5rem;
+}
+
+.story, .skills, .dragons {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.story h2, .skills h2, .dragons h2 {
+    color: #194d8a;
+    margin-bottom: 1rem;
+}
+
+.story-btn, .animate-btn {
+    background: #aad1ff ;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.story-btn:hover, .animate-btn:hover {
+    background: #aad1ff ;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Таблица навыков */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skills-table th,
+.skills-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skills-table th {
+    background: rgba(68, 0, 255, 0.2);
+    color: #1f2f41;
+}
+
+.skills-table tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Список драконов */
+.dragons-list ol {
+    padding-left: 2rem;
+}
+
+.dragons-list li {
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.dragons-list li:hover {
+    color: #aad1ff ;
+    transform: translateX(10px);
+}
+
+/* Футер */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-card {
+        max-width: 100%;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletter input {
+        min-width: auto;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+
+/* Стили для бонусов рас */
+.race-bonus {
+    background: rgba(153, 0, 255, 0.2);
+    color: #aad1ff ;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid rgba(47, 0, 255, 0.3);
+}
+
+/* Сетка драконов */
+.dragons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.dragon-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 68, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.dragon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 38, 255, 0.2);
+}
+
+.dragon-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dragon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.dragon-card:hover .dragon-image img {
+    transform: scale(1.1);
+}
+
+.no-image {
+    color: #062f5e;
+    font-style: italic;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Стили для галереи локаций */
+.locations-gallery {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.locations-gallery h2 {
+    color: #aad1ff ;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* Фильтры локаций */
+.locations-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(76, 0, 255, 0.3);
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    background: rgba(119, 0, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.filter-btn.active {
+    background: #aad1ff ;
+    color: #000;
+    border-color: #aad1ff ;
+}
+
+/* Сетка локаций */
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.location-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(98, 0, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.location-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(98, 0, 255, 0.3);
+    border-color: #aad1ff ;
+}
+
+.location-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(45deg, #1a2a6c, #2c1a1a);
+}
+
+.location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.location-card:hover .location-image img {
+    transform: scale(1.1);
+}
+
+.no-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aad1ff ;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.location-info {
+    padding: 1.5rem;
+}
+
+.location-info h3 {
+    color: #aad1ff ;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.location-info p {
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.location-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.location-stats span {
+    background: rgba(98, 0, 255, 0.2);
+    color: #aad1ff ;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(140, 0, 255, 0.3);
+}
+
+/* Управление локациями */
+.locations-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.shuffle-btn, .show-all-btn {
+    background: linear-gradient(45deg, #4299e1, #667eea);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+.shuffle-btn:hover, .show-all-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Анимации для фильтрации */
+.location-card {
+    animation: locationAppear 0.6s ease-out;
+}
+
+@keyframes locationAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.location-card.hidden {
+    display: none;
+}
+
+/* Стили для разных типов локаций */
+.location-card[data-type="city"] {
+    border-left: 4px solid #e53e3e;
+}
+
+.location-card[data-type="village"] {
+    border-left: 4px solid #38a169;
+}
+
+.location-card[data-type="guild"] {
+    border-left: 4px solid #d69e2e;
+}
+
+.location-card[data-type="special"] {
+    border-left: 4px solid #805ad5;
+}
+
+/* Эффекты для разных типов при наведении */
+.location-card[data-type="city"]:hover {
+    box-shadow: 0 15px 30px rgba(229, 62, 62, 0.3);
+}
+
+.location-card[data-type="village"]:hover {
+    box-shadow: 0 15px 30px rgba(56, 161, 105, 0.3);
+}
+
+.location-card[data-type="guild"]:hover {
+    box-shadow: 0 15px 30px rgba(214, 158, 46, 0.3);
+}
+
+.location-card[data-type="special"]:hover {
+    box-shadow: 0 15px 30px rgba(128, 90, 213, 0.3);
+}
+
+/* Адаптивность для галереи локаций */
+@media (max-width: 768px) {
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .locations-filter {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 200px;
+    }
+    
+    .locations-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .shuffle-btn, .show-all-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-stats {
+        flex-direction: column;
+    }
+    
+    .location-stats span {
+        text-align: center;
+    }
+}
+
+/* Анимация перемешивания */
+.location-card.shuffling {
+    animation: shuffleAnimation 0.5s ease-in-out;
+}
+
+@keyframes shuffleAnimation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+
+
+
+
+/* Стили для уведомлений */
+.notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: rgba(72, 187, 120, 0.9);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    z-index: 1001;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

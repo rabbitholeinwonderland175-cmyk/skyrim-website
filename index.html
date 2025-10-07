@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Elder Scrolls V: Skyrim - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+     <script src="libs/jquery.min.js.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">Skyrim</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Главная</a></li>
+                    <li><a href="about.html" class="nav-link">О игре</a></li>
+                    <li><a href="#races" class="nav-link">Расы</a></li>
+                    <li><a href="#gallery" class="nav-link">Галерея</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <button id="themeButton">Тёмная тема</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Добро пожаловать в Скайрим</h2>
+                <p>Исследуйте огромный мир, полный опасностей и приключений</p>
+                <button class="cta-button" id="exploreBtn">Начать путешествие</button>
+            </div>
+        </section>
+
+       <!-- Заменяем существующую секцию races на эту -->
+<section class="features" id="races">
+    <h2>Расы Скайрима</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Норды</h3>
+            <p>Храбрые воины севера, устойчивые к холоду</p>
+            <div class="race-bonus">+50% сопротивления холоду</div>
+        </div>
+        <div class="feature-card">
+            <h3>Данмеры</h3>
+            <p>Тёмные эльфы с сопротивлением огню</p>
+            <div class="race-bonus">+50% сопротивления огню</div>
+        </div>
+        <div class="feature-card">
+            <h3>Каджиты</h3>
+            <p>Кошачьи человеки, отличные воры</p>
+            <div class="race-bonus">+10 к Скрытности</div>
+        </div>
+        <div class="feature-card">
+            <h3>Аргониане</h3>
+            <p>Люди-ящерицы, дышащие под водой</p>
+            <div class="race-bonus">Дыхание под водой</div>
+        </div>
+        <div class="feature-card">
+            <h3>Альтмеры</h3>
+            <p>Высокие эльфы, маги от природы</p>
+            <div class="race-bonus">+50 к магии</div>
+        </div>
+        <div class="feature-card">
+            <h3>Босмеры</h3>
+            <p>Лесные эльфы, лучшие лучники</p>
+            <div class="race-bonus">+10 к Стрельбе</div>
+        </div>
+        <div class="feature-card">
+            <h3>Бретоны</h3>
+            <p>Магические люди с сопротивлением магии</p>
+            <div class="race-bonus">+25% сопротивления магии</div>
+        </div>
+        <div class="feature-card">
+            <h3>Редгарды</h3>
+            <p>Воинственный народ из Хаммерфелла</p>
+            <div class="race-bonus">+10 к Одноручному оружию</div>
+        </div>
+        <div class="feature-card">
+            <h3>Имперцы</h3>
+            <p>Уроженцы Сиродила, дипломаты</p>
+            <div class="race-bonus">+10 к Красноречию</div>
+        </div>
+    </div>
+</section>
+
+        <section class="factions">
+            <h2>Фракции Скайрима</h2>
+            <div class="factions-list">
+                <ul>
+                    <li>Братья Бури</li>
+                    <li>Имперский Легион</li>
+                    <li>Коллегия Винтерхолда</li>
+                    <li>Братство Тёмной Руки</li>
+                    <li>Дозорные Даэдра</li>
+                </ul>
+            </div>
+            <button id="toggleFactions" class="toggle-btn">Скрыть/Показать фракции</button>
+        </section>
+
+       <!-- Добавляем после существующей галереи или вместо неё -->
+<section class="locations-gallery" id="gallery">
+    <h2>Города и Локации Скайрима</h2>
+    <div class="locations-grid">
+        <!-- Столичные города -->
+        <div class="location-card" data-type="city">
+            <div class="location-image">
+                <img src="img/whiterun.jpg.jpeg"Вайтран" onerror="this.style.display='none'">
+               
+            </div>
+            <div class="location-info">
+                <h3>Вайтран</h3>
+                <p>Столица Скайрима, город на равнинах</p>
+                <div class="location-stats">
+                    <span>🏰 Город</span>
+                    <span>🛡️ Йорваскр</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="city">
+            <div class="location-image">
+                <img src="img/windhelm.jpg" alt="Виндхельм" onerror="this.style.display='none'">
+            </div>
+            <div class="location-info">
+                <h3>Виндхельм</h3>
+                <p>Древняя столица нордов, город королей</p>
+                <div class="location-stats">
+                    <span>👑 Столица</span>
+                    <span>⚔️ Братья Бури</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="city">
+            <div class="location-image">
+                <img src="img/solitude.jpeg" alt="Солитьюд" onerror="this.style.display='none'">
+            </div>
+            <div class="location-info">
+                <h3>Солитьюд</h3>
+                <p>Имперская столица Скайрима</p>
+                <div class="location-stats">
+                    <span>🏛️ Столица</span>
+                    <span>⚜️ Империя</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="city">
+            <div class="location-image">
+                <img src="img/marcart.jpeg" alt="Маркарт" onerror="this.style.display='none'">
+             
+            </div>
+            <div class="location-info">
+                <h3>Маркарт</h3>
+                <p>Каменный город двемеров</p>
+                <div class="location-stats">
+                    <span>⛰️ Город</span>
+                    <span>⚒️ Двемеры</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="city">
+            <div class="location-image">
+                <img src="img/rift.jpg" alt="Рифтен" onerror="this.style.display='none'">
+             
+            </div>
+            <div class="location-info">
+                <h3>Рифтен</h3>
+                <p>Город вскармливания,город воров</p>
+                <div class="location-stats">
+                    <span>🎣 Город</span>
+                    <span>💰 Гильдия воров</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Малые города -->
+        <div class="location-card" data-type="city">
+            <div class="location-image">
+                <img src="img/dawnstar.jpg" alt="Донстар" onerror="this.style.display='none'">
+                
+            </div>
+            <div class="location-info">
+                <h3>Данстар</h3>
+                <p>Портовый город на севере</p>
+                <div class="location-stats">
+                    <span>⛵ Город</span>
+                    <span>😴 Кошмары</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="city">
+            <div class="location-image">
+                <img src="img/winterhold.jpg" alt="Винтерхолд" onerror="this.style.display='none'">
+          
+            </div>
+            <div class="location-info">
+                <h3>Винтерхолд</h3>
+                <p>Город магов, почти уничтоженный</p>
+                <div class="location-stats">
+                    <span>🏔️ Город</span>
+                    <span>🔮 Коллегия магов</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="city">
+            <div class="location-image">
+                <img src="img/morthal.jpeg" alt="Морфал" onerror="this.style.display='none'">
+           
+            </div>
+            <div class="location-info">
+                <h3>Морфал</h3>
+                <p>Болотный город с тайнами</p>
+                <div class="location-stats">
+                    <span>🌫️ Город</span>
+                    <span>🧙‍♀️ Некроманты</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="city">
+            <div class="location-image">
+                <img src="img/folkrith.jpg" alt="Фолкрит" onerror="this.style.display='none'">
+              
+            </div>
+            <div class="location-info">
+                <h3>Фолкрит</h3>
+                <p>Город с древним кладбищем</p>
+                <div class="location-stats">
+                    <span>⚰️ Город</span>
+                    <span>🌲 Лес</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Деревни -->
+        <div class="location-card" data-type="village">
+            <div class="location-image">
+                <img src="img/riverwood.jpg" alt="Ривервуд" onerror="this.style.display='none'">
+                
+            </div>
+            <div class="location-info">
+                <h3>Ривервуд</h3>
+                <p>Первая деревня на пути Довакина</p>
+                <div class="location-stats">
+                    <span>🌳 Деревня</span>
+                    <span>🪓 Лесопилка</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="village">
+            <div class="location-image">
+                <img src="img/ivarsted.jpg" alt="Айварстед" onerror="this.style.display='none'">
+               
+            </div>
+            <div class="location-info">
+                <h3>Айварстед</h3>
+                <p>Тихая деревня у подножья горы</p>
+                <div class="location-stats">
+                    <span>🏞️ Деревня</span>
+                    <span>⛰️ Семь тысяч шагов</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="village">
+            <div class="location-image">
+                <img src="img/drag.jpeg" alt="Драконий мост" onerror="this.style.display='none'">
+             
+            </div>
+            <div class="location-info">
+                <h3>Драконий мост</h3>
+                <p>Деревня с легендарным мостом</p>
+                <div class="location-stats">
+                    <span>🌉 Деревня</span>
+                    <span>🐉 Драконий мост</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="village">
+            <div class="location-image">
+                <img src="img/roriksted.jpg" alt="Рорикштед" onerror="this.style.display='none'">
+                
+            </div>
+            <div class="location-info">
+                <h3>Рорикстед</h3>
+                <p>Земледельческая деревня</p>
+                <div class="location-stats">
+                    <span>🌾 Деревня</span>
+                    <span>🚜 Фермы</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Гильдии -->
+        <div class="location-card" data-type="guild">
+            <div class="location-image">
+                <img src="img/iorwaskr.jpg" alt="Йорваскр" onerror="this.style.display='none'">
+               
+            </div>
+            <div class="location-info">
+                <h3>Йорваскр</h3>
+                <p>Обитель Соратников в Вайтране</p>
+                <div class="location-stats">
+                    <span>🛡️ Гильдия</span>
+                    <span>⚔️ Соратники</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="guild">
+            <div class="location-image">
+                <img src="img/collegia.jpg" alt="Коллегия Винтерхолда" onerror="this.style.display='none'">
+              
+            </div>
+            <div class="location-info">
+                <h3>Коллегия Винтерхолда</h3>
+                <p>Центр магического обучения</p>
+                <div class="location-stats">
+                    <span>🔮 Гильдия</span>
+                    <span>📚 Магия</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="guild">
+            <div class="location-image">
+                <img src="img/guild.jpg" alt="Гильдия воров" onerror="this.style.display='none'">
+             
+            </div>
+            <div class="location-info">
+                <h3>Гильдия воров</h3>
+                <p>Штаб воров под Рифтеном</p>
+                <div class="location-stats">
+                    <span>💰 Гильдия</span>
+                    <span>🎭 Воровство</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card" data-type="guild">
+            <div class="location-image">
+                <img src="img/dark.jpeg" alt="Братство Тёмной Руки" onerror="this.style.display='none'">
+                
+            </div>
+            <div class="location-info">
+                <h3>Братство Тёмной Руки</h3>
+                <p>Гильдия убийц</p>
+                <div class="location-stats">
+                    <span>🗡️ Гильдия</span>
+                    <span>☠️ Убийства</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Особые места -->
+        <div class="location-card" data-type="special">
+            <div class="location-image">
+                <img src="img/high.jpeg" alt="Высокий Хротгар" onerror="this.style.display='none'">
+    
+            </div>
+            <div class="location-info">
+                <h3>Высокий Хротгар</h3>
+                <p>Монастырь Седобородых</p>
+                <div class="location-stats">
+                    <span>🏔️ Особое</span>
+                    <span>🗣️ Голос</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-card" data-type="special">
+            <div class="location-image">
+                <img src="img/sowngard.jpg" alt="Совнгард" onerror="this.style.display='none'">
+                
+            </div>
+            <div class="location-info">
+                <h3>Совнгард</h3>
+                <p>Зал героев нордов в загробном мире</p>
+                <div class="location-stats">
+                    <span>🌈 Особое</span>
+                    <span>⚔️ Герои</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="locations-controls">
+        <button id="shuffleLocations" class="shuffle-btn">Перемешать локации</button>
+    </div>
+</section>
+
+        <section class="newsletter">
+            <h2>Подписка на новости</h2>
+            <form id="newsletterForm">
+                <input type="email" id="email" placeholder="Введите ваш email" required>
+                <button type="submit">Подписаться</button>
+            </form>
+            <div id="formMessage"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 The Elder Scrolls V: Skyrim. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/jquery-code.js"></script>
+
+</body>
+</html>
+
+
+
